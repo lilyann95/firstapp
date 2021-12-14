@@ -1,0 +1,21 @@
+
+
+$baseFont: 16;
+
+@function pxToRemOrEm($pxValues, $unit: rem) {
+    $remValues: null;
+
+    @each $pxValue in $pxValues {
+        $remValues: append($remValues, $pxValue / $baseFont + $unit)
+    }
+
+    @return $remValues;
+}
+
+@function pxToRem($pxValues) {
+    @return pxToRemOrEm($pxValues, rem);
+}
+
+@function pxToEm($pxValues) {
+    @return pxToRemOrEm($pxValues, em)
+}

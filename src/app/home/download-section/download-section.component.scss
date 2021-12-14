@@ -1,0 +1,26 @@
+@import '../../../theme/colors.scss';
+
+.download-section {
+    background-color: $primaryColor;
+    .download-content {
+        margin-top: 30px;
+        .mobile-phone {
+            margin-bottom: -150px;
+        }
+        .phones-content {
+            margin-top: 160px;
+            padding-left: 50px;
+        }
+    }
+    .download-wave-bottom {
+        height: 9em;
+        background-image: url("../../../assets/images/homepage/download/download-wave-bottom.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    @media (max-width: 576px) {
+        .download-wave-bottom {
+            height: 50px;
+        }
+    }
+}

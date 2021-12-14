@@ -1,0 +1,155 @@
+<!-- <div class="container-fluid"> -->
+    <form 
+        [formGroup]="registerForm" 
+        (ngSubmit)="onsubmit()" 
+        [ngClass]="{submitted: isSubmitted }"
+    >
+        <div class="form-group mb-0 py-5">
+            <div class="row justify-content-center">
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div class="input-wrapper draw meet position-relative mb-4">
+                        <label for="firstName" class="position-absolute input-label"
+                            >First Name:</label>
+                        <input
+                            type="text" 
+                            class="form-control form-input p-3"
+                            formControlName="firstName"
+                            aria-describedby="first name" 
+                        >
+                    </div>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div class="input-wrapper position-relative mb-4">
+                        <label for="lastName" class="position-absolute input-label"
+                            >Last Name:</label>
+                        <input 
+                            type="text" 
+                            formControlName="lastName" 
+                            aria-describedby="last name"
+                            class="form-control form-input p-3"
+                        >  
+                    </div>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div 
+                        class="input-wrapper position-relative"
+                        [ngClass]= "{
+                            'mb-4': !registerForm.controls.PhoneContact.errors?.pattern,
+                            'mb-2': registerForm.controls.PhoneContact.errors?.pattern
+                        }"
+                    >
+                        <label for="PhoneContact" class="position-absolute input-label"
+                            >Phone Contact:</label>
+                        <input 
+                            type="tel"
+                            formControlName="PhoneContact" 
+                            class="form-control form-input p-3"
+                            aria-describedby="phone number"
+                        >
+                    </div>
+                    <small 
+                        *ngIf="registerForm.controls.PhoneContact.errors?.pattern"
+                        class="text-danger mb-4 error-message"
+                    >
+                        Please enter a valid phone number
+                    </small>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div 
+                        class="input-wrapper position-relative mb-4"
+                        [ngClass]="{
+                            'mb-4': !registerForm.controls.email.errors?.pattern && !emailMessage,
+                            'mb-2': registerForm.controls.email.errors?.pattern || emailMessage
+                        }"
+                    >
+                        <label for="email" class="position-absolute input-label"
+                            >Email:</label>
+                        <input 
+                            type="email" 
+                            formControlName="email" 
+                            class="form-control form-input p-3"
+                            aria-describedby="emailHelp"
+                            id="email"
+                        >
+                    </div>
+                    <div *ngIf="registerForm.controls.email.errors?.pattern">
+                        <small class="text-danger mb-4 error-message">
+                            Please enter a valid email
+                        </small>
+                        <small *ngIf="emailMessage" class="text-danger mb-4 error-message">
+                            {{ emailMessage }}
+                        </small>
+                    </div>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div 
+                        class="input-wrapper position-relative"
+                        [ngClass]="{
+                            'mb-4': !registerForm.controls.password.errors?.minlength,
+                            'mb-2': registerForm.controls.password.errors?.minlength
+                        }"
+                    >
+                        <label for="password" class="position-absolute input-label"
+                            >Password:</label>
+                        <input 
+                            type="password" 
+                            formControlName="password" 
+                            class="form-control form-input p-3"
+                            id="password"
+                        >
+                    </div>
+                    <small 
+                        *ngIf="registerForm.controls.password.errors?.minlength"
+                        class="text-danger mb-4 error-message"
+                    >
+                        Password must have 8 characters minimium.
+                    </small>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div class="form-check mb-2">
+                        <input 
+                            type="checkbox" 
+                            formControlName="terms" 
+                            class="form-check-input"
+                            id="terms"
+                        >
+                        <label 
+                            for="terms" 
+                            class="form-check-label font-weight-medium"
+                        >
+                            I agree to Cryptonite Privacy Policy & Terms
+                        </label>
+                    </div>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7">
+                    <div class="form-check mb-4">
+                        <input 
+                            type="checkbox" 
+                            formControlName="agreements" 
+                            class="form-check-input"
+                            id="agreements"
+                        >
+                        <label 
+                            for="agreements" 
+                            class="form-check-label font-weight-medium"
+                        >
+                            Keep me informed about Cryptonite insights to accelerate my growth
+                        </label>
+                    </div>
+                </div>
+                <div class="col-420px-12 col-10 col-sm-8 col-xl-7 text-center">
+                    <button 
+                        type="submit" 
+                        class="btn btn-danger font-weight-semibold"
+                        [disabled]="!registerForm.valid || emailMessage"
+                    >
+                        Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+<!-- </div> -->
+  
+

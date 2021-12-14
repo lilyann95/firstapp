@@ -1,0 +1,17 @@
+@import "../../../theme/colors.scss";
+ 
+.empower-section {
+    background-color: $primaryColor;
+    .empower-cover {
+        padding: 50px 0px;
+    }
+    h1 {
+        font-size: 90px ;
+    }
+}
+#button-anim {
+    background-color: $accentColor;
+    border-radius: 80px;
+    width: 270px;
+    height: 80px;
+}

@@ -1,0 +1,9 @@
+@import "/src/styles/mixnins";
+@import "../../styles/styles.scss";
+
+.error-message {
+    display: inline-flex;
+    font-size: pxToRem(12);
+    width: 100%;
+    text-align: start;
+}

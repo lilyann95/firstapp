@@ -1,0 +1,64 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+@import "./theme/colors.scss";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~swiper/swiper-bundle";
+@import "~ngx-bootstrap/datepicker/bs-datepicker.css";
+@import "~ngx-toastr/toastr";
+
+
+//Bootstrap override
+html, body { height: 100%; }
+
+body { 
+    // margin: 0; 
+    font-family: "Poppins", sans-serif; 
+    line-height: 40px;
+}
+
+.text-danger {
+    color: $dangerColor !important;
+}
+
+.text-primary {
+    color: $primaryColor !important;
+}
+
+.text-secondary {
+    color: $secondaryColor !important;
+}
+
+.text-accent {
+    color: $accentColor !important;
+}
+// Custom classes
+.font-weight-semibold {
+    font-weight: 600;
+  }
+  
+  .font-weight-medium {
+    font-weight: 500;
+  }
+
+  .font-48px {
+    font-size: clamp(1.875rem, 4.2vw, 3.125em);
+  }
+
+  .font-35px {
+    font-size: clamp(1.875rem, 4.2vw, 2.125em);
+  }
+  
+  .font-26px {
+    font-size: clamp(0.875rem, 2.05vw, 1.5rem);
+  }
+  
+  .font-20px {
+    font-size: clamp(0.875rem, 2.05vw, 1.25rem);
+  }
+
+  .font-13px {
+    font-size: clamp(0.875rem, 2.05vw, 0.125rem);
+  }

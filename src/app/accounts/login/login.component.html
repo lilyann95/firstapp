@@ -1,0 +1,43 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 my-auto">
+            <div class="container">
+                <div class="title mb-5">
+                    <h2>Login</h2>
+                    <p>Don't have an account?,<a href="#">Get started here!</a></p>
+                </div>
+                <form [formGroup]="LocalForm" #form="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" placeholder="Enter your email here" formControlName="email" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="LocalForm.controls['email'].hasError('email') && !LocalForm.controls['email'].hasError('required')">
+                                Please enter a valid email address
+                            </mat-error>
+                            <mat-error *ngIf="LocalForm.controls['email'].hasError('required')">
+                                Email is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <pre></pre>
+                    <div class="form-group">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" placeholder="Enter your password" formControlName="password" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="LocalForm.controls.password.hasError('password') && !LocalForm.controls['password'].hasError('required')">
+                                Please enter a correct password!
+                            </mat-error>
+                            <mat-error *ngIf="LocalForm.controls['password'].hasError('required')">
+                                Password is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <pre></pre>
+                    <button mat-raised-button type="submit" color="primary">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div> -->
