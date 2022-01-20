@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { AccountsRoutingModule } from './accounts-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RegisterFormComponent } from './create/register-form/register-form.component';

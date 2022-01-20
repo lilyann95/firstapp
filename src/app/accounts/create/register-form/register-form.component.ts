@@ -51,4 +51,14 @@ export class RegisterFormComponent {
     this.isFormSubmitted(this.isSubmitted)
     // console.log(this.registerForm.value);
   }
+  
+  submitForm() {
+    this.isSubmitted = true;
+    if (this.registerForm.invalid) {
+      this.isSubmitted = false;
+      return;
+    }
+  }
 }
+
+// .update()?.subscribe({ next: () => {}, error: ()=> {} }); to the service this.service<name>

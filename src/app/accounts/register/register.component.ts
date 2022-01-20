@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ConfirmpasswordService } from '../../Services/confirmpassword.service';
-import { DataService } from '../../Services/data.service';
+import { ConfirmpasswordService } from '../../shared/Services/confirmpassword.service';
+import { DataService } from '../../shared/Services/data.service';
 
 @Component({
   selector: 'app-register',

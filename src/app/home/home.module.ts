@@ -14,7 +14,10 @@ import { SubscribeSectionComponent } from './subscribe-section/subscribe-section
 import { FooterSectionComponent } from './footer-section/footer-section.component';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,12 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CarouselModule
+    CarouselModule,
+    //Angular material
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })

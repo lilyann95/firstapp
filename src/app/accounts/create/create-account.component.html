@@ -1,6 +1,10 @@
 <div class="container-fluid vh-100 w-100">
     <div class="row h-100">
-        <div class="d-none d-md-block col-12 col-md-6 orientation"></div>
+        <div class="col-md-6 d-none d-md-block orientation">
+            <div class="col-11">
+                <!-- <img src="assets/images/green.jfif" alt="GREEN" class="img-fluid"> -->
+            </div>
+        </div>
         <div
             class="
                 col-12 col-md-6 
@@ -16,26 +20,23 @@
                 alt="Cryptonite Logo" 
                 width="30%"
             >
-            <h3 class="mt-4 mb-0 text-primary font-weight-bold text-center">
-                How much funding
-            </h3>
-            <h3 class="mb-4 text-primary font-weight-regular text-center">
-                are you eligible for?
+            <h3 class="my-4 text-primary font-weight-medium">
+                Welcome to Cryptonite account formation
             </h3>
             <info-form 
-                *ngIf="step === 'info'; else create"
+                *ngIf="step !== 'info'; else create"
                 class="w-100 mb-5"
             ></info-form>
             <ng-template #create>
-                <register-form 
+                <register-form
                     class="w-100 mb-5"
                     (submit)="isFormSubmitted($event)"
                 ></register-form>
             </ng-template>
-            <p class="text-primary font-weight-medium text-center">
+            <p class="text-primary font-weight-medium">
                 Already have an account?<a
                     [routerLink]="['/accounts/login']"
-                    class="text-danger font-weight-bold"
+                    class="text-danger font-weight-semibold"
                 >
                     Sign in
                 </a>

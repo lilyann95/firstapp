@@ -10,6 +10,8 @@ import { HomeModule } from './home/home.module';
 import { AccountsModule } from './accounts/accounts.module';
 
 
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,

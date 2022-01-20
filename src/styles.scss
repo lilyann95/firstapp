@@ -6,17 +6,18 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~swiper/swiper-bundle";
-@import "~ngx-bootstrap/datepicker/bs-datepicker.css";
+// @import "~ngx-bootstrap/datepicker/bs-datepicker.css";
 @import "~ngx-toastr/toastr";
 
 
 //Bootstrap override
-html, body { height: 100%; }
-
 body { 
-    // margin: 0; 
-    font-family: "Poppins", sans-serif; 
-    line-height: 40px;
+  min-height: 100% !important; 
+  font-family: "Poppins", sans-serif;
+}
+
+.container { 
+    max-width: 1366px;
 }
 
 .text-danger {
@@ -34,31 +35,38 @@ body {
 .text-accent {
     color: $accentColor !important;
 }
+
+.bg-primary {
+  background-color: $primaryColor !important;
+}
+
 // Custom classes
 .font-weight-semibold {
     font-weight: 600;
   }
   
-  .font-weight-medium {
-    font-weight: 500;
-  }
+.font-weight-medium {
+  font-weight: 500;
+}
 
-  .font-48px {
-    font-size: clamp(1.875rem, 4.2vw, 3.125em);
-  }
+.font-48px {
+  font-size: clamp(1.875rem, 4.2vw, 3.125em);
+}
 
-  .font-35px {
-    font-size: clamp(1.875rem, 4.2vw, 2.125em);
-  }
-  
-  .font-26px {
-    font-size: clamp(0.875rem, 2.05vw, 1.5rem);
-  }
-  
-  .font-20px {
-    font-size: clamp(0.875rem, 2.05vw, 1.25rem);
-  }
+.font-35px {
+  font-size: clamp(1.875rem, 4.2vw, 2.125em);
+}
 
-  .font-13px {
-    font-size: clamp(0.875rem, 2.05vw, 0.125rem);
-  }
+.font-26px {
+  font-size: clamp(0.875rem, 2.05vw, 1.5rem);
+}
+
+.font-20px {
+  font-size: clamp(0.875rem, 2.05vw, 1.25rem);
+}
+
+.font-13px {
+  font-size: clamp(0.875rem, 2.05vw, 0.25rem);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

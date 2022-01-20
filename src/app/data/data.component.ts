@@ -1,6 +1,6 @@
 import { DataSource } from '@angular/cdk/collections';
 import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from '../Services/data.service';
+import { DataService } from '../shared/Services/data.service';
 
 
 
