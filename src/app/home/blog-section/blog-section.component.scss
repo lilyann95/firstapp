@@ -1,37 +1,8 @@
 @import "../../../theme/colors.scss";
 
-.blog-section{
-    margin: 100px 0px 30px;
-    .latest-info {
-        .info-title{
-            padding-bottom: 30px;
-        }
-        .info-content {
-            margin-top: 50px;
-            .block-content {
-                padding: 15px 25px;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 31px rgba(0, 0, 0, 0.07);
-                border: 2.3px solid #888888;
-                border-radius: 19px;
-                width: 350px;
-                height: 300px; 
-                margin-top: 15px;
-            }
-            .blockB-content {
-                padding: 23px 59px 14px 33px;
-                box-shadow: 5px 9px 18px rgba(0, 0, 0, 0.29), 8px 5px 31px rgba(0, 0, 0, 0.33);
-                border: 2.3px solid $accentColor;
-                border-radius: 15px;
-                width: 400px;
-                height: 350px;
-            }
-            h3 {
-                text-transform: capitalize;
-            }
-            p {
-                line-height: 18.5px;
-            }
-        }
-        
+.mat-card {
+    border-radius: 0.625rem;
+    &.border-color {
+        border: 1px solid $accentColor;
     }
 }
